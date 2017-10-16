@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Assignment 2</title>
+		<title>Contact Us</title>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/static/css/style.css"/>
 	</head>
 	<body>
 		<header>
@@ -11,22 +11,25 @@
 			<a class = "header_button" href = {{url_for('about')}}> About Us </a>
 			<a class = "header_button" href = {{url_for('contact')}}> Contact Us </a>
 		</header>
-		<h1>Hello World</h1>
-		<p id = "blogposts">
-			<a href = {{url_for('get_post1') }}> Blog 1</a>
+		<h1> Contact Us </h1>
+		<p id="top">
+			{% for notification in notifications %}
+				{{ notification }}
+			{% endfor %}
+		</p>
+		<form name = "myContact" onsubmit="return validation();" action='/contact' method='POST'>
+		 	Name:<br>
+		 	<input type="text" name="name">
 			<br>
-			<a href = {{url_for('get_post2') }}> Blog 2</a>
+		  	Subject:<br>
+			<input type="text" name="subject">
 			<br>
-			<a href = {{url_for('get_post3') }}> Blog 3</a>
+			Message:<br>
+			<input type="text" name="message">
 			<br>
-			<a href = {{url_for('get_post4') }}> Blog 4</a>
-			<br>
-			<a href = {{url_for('get_post5') }}> Blog 5</a>
-			<br>
-		<p>
-		<!-- <form action="/blog/8-experiments-in-motivation" method="GET"> -->
-   			<!-- <input type="submit" value="Blog post 1" /> -->
-		<!-- </form> -->
+			<button type="submit" value="Submit"> Submit </button>
+		</form> 
+		<br>
 		<footer>
 			<a class = "footer_button" href = {{url_for('index')}}> Homepage </a>
 			<a class = "footer_button" href = {{url_for('about')}}> About Us </a>
@@ -34,4 +37,5 @@
 		</footer>
 		<script src="/static/js/script.js"></script>
 	</body>
-</html>		
+</html>
+	

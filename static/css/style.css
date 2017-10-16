@@ -1,3 +1,82 @@
-h1 {
-	color: blue;
+body {
+    background: #98FB98;
+}
+
+p {
+	font-size: 110%;
+}
+
+#blogposts {
+    padding-left:1cm;
+}
+
+.lyrics {
+    font-size: 105%;
+    padding-left:2cm;
+    font-style: italic;
+}
+
+ol {
+	font-size: 105%;
+}
+
+ul.dashed {
+	list-style-type: none;
+}
+
+ul.dashed > li {
+	text-indent: -5px;
+}
+
+ul.dashed > li:before {
+	content: "-";
+}
+
+a.header_button {
+	background-color: green;
+	border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+a.footer_button {
+	background-color: yellow;
+	border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.comment{
+    height: 150px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+input[type=text], select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+div {
+    /*border-radius: 5px;*/
+    background-color: #f2f2f2;
+    border: 2px solid green;
+    padding-top: 5px;
+    padding-left: 10px;
+    /*padding: 20px;*/
+    width: 80%;
 }
